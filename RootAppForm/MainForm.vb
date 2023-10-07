@@ -23,10 +23,14 @@ Public NotInheritable Class MainForm
         MyBase.OnLoad(e)
 
         AlignBottomRight(10, 10)
+    End Sub
+
+
+    Protected Overrides Sub OnShown(e As EventArgs)
+        MyBase.OnShown(e)
 
         pr_btn31__Click(Nothing, Nothing)
     End Sub
-
 
 
     Private Sub pr_btn31__Click(sender As Object, e As EventArgs) Handles m_btn31.Click

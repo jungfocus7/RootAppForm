@@ -51,6 +51,7 @@ namespace AppNormalForm
             _cms.Items.Add(new ToolStripMenuItemEx("1) 개발자", "Tsi_1", prToolStripMenu_Click));
             _cms.Items.Add(new ToolStripMenuItemEx("2) 개발자", "Tsi_2", prToolStripMenu_Click));
             _cms.Items.Add(new ToolStripMenuItemEx("3) 개발자", "Tsi_3", prToolStripMenu_Click));
+            _cms.Items.Add(new ToolStripSeparator());
             _cms.Items.Add(new ToolStripMenuItemEx("A) 개발자", "Tsi_A", prToolStripMenu_Click));
             _cms.Items.Add(new ToolStripMenuItemEx("B) 개발자", "Tsi_B", prToolStripMenu_Click));
             m_txb31.ContextMenuStrip = _cms;
@@ -60,7 +61,7 @@ namespace AppNormalForm
         {
             if (sender is ToolStripMenuItemEx tsm)
             {
-                string txt = $"# prClickCallback  {tsm.Text}";
+                string txt = $"# prClickCallback  {tsm.Text}{Environment.NewLine}";
                 Debug.WriteLine(txt);
                 m_txb31.AppendText(txt);
             }

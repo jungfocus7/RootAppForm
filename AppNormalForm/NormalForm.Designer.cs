@@ -50,6 +50,7 @@
             this.Controls.Add(this.m_txb31);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NormalForm";
+            this.ShowInTaskbar = false;
             this.Text = "NormalForm";
             this.ResumeLayout(false);
             this.PerformLayout();
