@@ -22,6 +22,7 @@ Partial Class MainForm
     '코드 편집기에서는 수정하지 마세요.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.m_btn31 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -43,6 +44,7 @@ Partial Class MainForm
         Me.ClientSize = New System.Drawing.Size(400, 500)
         Me.Controls.Add(Me.m_btn31)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(100, 40)
         Me.MaximizeBox = False
         Me.Name = "MainForm"

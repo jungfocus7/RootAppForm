@@ -23,6 +23,8 @@ Public NotInheritable Class MainForm
         MyBase.OnLoad(e)
 
         AlignBottomRight(10, 10)
+
+        pr_btn31__Click(Nothing, Nothing)
     End Sub
 
 

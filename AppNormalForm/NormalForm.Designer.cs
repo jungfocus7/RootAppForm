@@ -28,23 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NormalForm));
+            this.m_txb31 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // m_txb31
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 28);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(528, 398);
-            this.textBox1.TabIndex = 0;
+            this.m_txb31.Location = new System.Drawing.Point(12, 12);
+            this.m_txb31.Multiline = true;
+            this.m_txb31.Name = "m_txb31";
+            this.m_txb31.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.m_txb31.Size = new System.Drawing.Size(676, 735);
+            this.m_txb31.TabIndex = 0;
+            this.m_txb31.WordWrap = false;
             // 
             // NormalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 800);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.m_txb31);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NormalForm";
             this.Text = "NormalForm";
             this.ResumeLayout(false);
@@ -54,6 +58,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox m_txb31;
     }
 }
