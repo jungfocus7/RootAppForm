@@ -29,7 +29,7 @@ Public NotInheritable Class MainForm
         m_lstv.HideSelection = False
         m_lstv.FullRowSelect = True
         m_lstv.Columns.Add("번호", 40, HorizontalAlignment.Left)
-        m_lstv.Columns.Add("앱 이름", 300, HorizontalAlignment.Left)
+        m_lstv.Columns.Add("앱 이름", 200, HorizontalAlignment.Left)
 
         Dim lf As New Font(m_lstv.Font, FontStyle.Regular)
         Dim lvi As New ListViewItem With {
@@ -40,13 +40,15 @@ Public NotInheritable Class MainForm
         m_lstv.Items.Add(lvi)
         m_lstv.EndUpdate()
         m_lstv.Items(0).Selected = True
+
+        pr_btn31__Click(Nothing, Nothing)
     End Sub
 
 
     Protected Overrides Sub OnShown(e As EventArgs)
         MyBase.OnShown(e)
 
-        pr_btn31__Click(Nothing, Nothing)
+        'pr_btn31__Click(Nothing, Nothing)
     End Sub
 
 
@@ -64,4 +66,10 @@ Public NotInheritable Class MainForm
         Catch
         End Try
     End Sub
+
+
+    Private Sub pr_lstv__DoubleClick(sender As Object, e As EventArgs) Handles m_lstv.DoubleClick
+        pr_btn31__Click(Nothing, Nothing)
+    End Sub
+
 End Class

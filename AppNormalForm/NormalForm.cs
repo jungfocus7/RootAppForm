@@ -54,9 +54,9 @@ namespace AppNormalForm
             _cms.Items.Add(new ToolStripMenuItemEx("2) 개발자", "Tsi_2", prToolStripMenu_Click));
             _cms.Items.Add(new ToolStripMenuItemEx("3) 개발자", "Tsi_3", prToolStripMenu_Click));
             _cms.Items.Add(new ToolStripSeparator());
-            _cms.Items.Add(new ToolStripMenuItemEx("A) 개발자", "Tsi_A", prToolStripMenu_Click));
-            _cms.Items.Add(new ToolStripMenuItemEx("B) 개발자", "Tsi_B", prToolStripMenu_Click));
-            _cms.Items.Add(new ToolStripMenuItemEx("C) 개발자", "Tsi_C", prToolStripMenu_Click));
+            _cms.Items.Add(new ToolStripMenuItemEx("a) 개발자", "Tsi_a", prToolStripMenu_Click));
+            _cms.Items.Add(new ToolStripMenuItemEx("b) 개발자", "Tsi_b", prToolStripMenu_Click));
+            _cms.Items.Add(new ToolStripMenuItemEx("c) 개발자", "Tsi_c", prToolStripMenu_Click));
             m_btn31.ContextMenuStrip = _cms;
         }
 

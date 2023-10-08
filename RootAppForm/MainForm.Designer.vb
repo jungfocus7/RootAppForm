@@ -31,7 +31,7 @@ Partial Class MainForm
         '
         Me.m_btn31.Cursor = System.Windows.Forms.Cursors.Hand
         Me.m_btn31.Font = New System.Drawing.Font("맑은 고딕", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.m_btn31.Location = New System.Drawing.Point(308, 465)
+        Me.m_btn31.Location = New System.Drawing.Point(208, 315)
         Me.m_btn31.Name = "m_btn31"
         Me.m_btn31.Size = New System.Drawing.Size(80, 23)
         Me.m_btn31.TabIndex = 0
@@ -44,7 +44,7 @@ Partial Class MainForm
         Me.m_lstv.HideSelection = False
         Me.m_lstv.Location = New System.Drawing.Point(12, 12)
         Me.m_lstv.Name = "m_lstv"
-        Me.m_lstv.Size = New System.Drawing.Size(376, 447)
+        Me.m_lstv.Size = New System.Drawing.Size(276, 297)
         Me.m_lstv.TabIndex = 1
         Me.m_lstv.UseCompatibleStateImageBehavior = False
         '
@@ -52,7 +52,7 @@ Partial Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(400, 500)
+        Me.ClientSize = New System.Drawing.Size(300, 350)
         Me.Controls.Add(Me.m_lstv)
         Me.Controls.Add(Me.m_btn31)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
