@@ -1,12 +1,10 @@
 ﻿Imports System
+Imports System.Drawing
 Imports System.Windows.Forms
 Imports AppNormalForm
 Imports RootAppCommon
 Imports RootAppCommon.Controls
 Imports RootAppCommon.Models
-
-
-
 
 Public NotInheritable Class MainForm
     Public Sub New()
@@ -23,6 +21,25 @@ Public NotInheritable Class MainForm
         MyBase.OnLoad(e)
 
         AlignBottomRight(10, 10)
+
+
+        m_lstv.BeginUpdate()
+        m_lstv.Font = New Font(m_lstv.Font, FontStyle.Bold)
+        m_lstv.View = View.Details
+        m_lstv.HideSelection = False
+        m_lstv.FullRowSelect = True
+        m_lstv.Columns.Add("번호", 40, HorizontalAlignment.Left)
+        m_lstv.Columns.Add("앱 이름", 300, HorizontalAlignment.Left)
+
+        Dim lf As New Font(m_lstv.Font, FontStyle.Regular)
+        Dim lvi As New ListViewItem With {
+            .Text = "01)",
+            .Font = lf
+        }
+        lvi.SubItems.Add("NormalForm")
+        m_lstv.Items.Add(lvi)
+        m_lstv.EndUpdate()
+        m_lstv.Items(0).Selected = True
     End Sub
 
 
@@ -34,10 +51,17 @@ Public NotInheritable Class MainForm
 
 
     Private Sub pr_btn31__Click(sender As Object, e As EventArgs) Handles m_btn31.Click
-        Dim fi As FormInfo = FormManager.GetFormInfo("NormalForm")
-        If fi.RefFrom Is Nothing Then
-            fi.RefFrom = New NormalForm()
-        End If
-        fi.RefFrom.ShowDialog(Me)
+        Try
+            Dim slvis As ListView.SelectedListViewItemCollection = m_lstv.SelectedItems
+            Dim lvi As ListViewItem = slvis(0)
+
+            Dim name As String = lvi.SubItems(1).Text
+            Dim fi As FormInfo = AppCommon.GetFormInfo(name)
+            If fi.RefFrom Is Nothing Then
+                fi.RefFrom = New NormalForm()
+            End If
+            fi.RefFrom.ShowDialog(Me)
+        Catch
+        End Try
     End Sub
 End Class

@@ -24,24 +24,36 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.m_btn31 = New System.Windows.Forms.Button()
+        Me.m_lstv = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
         '
         'm_btn31
         '
         Me.m_btn31.Cursor = System.Windows.Forms.Cursors.Hand
         Me.m_btn31.Font = New System.Drawing.Font("맑은 고딕", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
-        Me.m_btn31.Location = New System.Drawing.Point(313, 465)
+        Me.m_btn31.Location = New System.Drawing.Point(308, 465)
         Me.m_btn31.Name = "m_btn31"
-        Me.m_btn31.Size = New System.Drawing.Size(75, 23)
+        Me.m_btn31.Size = New System.Drawing.Size(80, 23)
         Me.m_btn31.TabIndex = 0
-        Me.m_btn31.Text = "Button1"
+        Me.m_btn31.Text = "선택 실행"
         Me.m_btn31.UseVisualStyleBackColor = True
+        '
+        'm_lstv
+        '
+        Me.m_lstv.Font = New System.Drawing.Font("맑은 고딕", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(129, Byte))
+        Me.m_lstv.HideSelection = False
+        Me.m_lstv.Location = New System.Drawing.Point(12, 12)
+        Me.m_lstv.Name = "m_lstv"
+        Me.m_lstv.Size = New System.Drawing.Size(376, 447)
+        Me.m_lstv.TabIndex = 1
+        Me.m_lstv.UseCompatibleStateImageBehavior = False
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(400, 500)
+        Me.Controls.Add(Me.m_lstv)
         Me.Controls.Add(Me.m_btn31)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -55,4 +67,5 @@ Partial Class MainForm
     End Sub
 
     Friend WithEvents m_btn31 As System.Windows.Forms.Button
+    Friend WithEvents m_lstv As System.Windows.Forms.ListView
 End Class

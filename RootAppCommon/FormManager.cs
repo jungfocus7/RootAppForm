@@ -9,29 +9,29 @@ namespace RootAppCommon
     public static class FormManager
     {
         #region "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 1"
-        static FormManager()
-        {
-            MainForm = Application.OpenForms["MainForm"];
-            _formInfos = new FormInfoMap();
-        }
+        //static FormManager()
+        //{
+        //    MainForm = Application.OpenForms["MainForm"];
+        //    _formInfos = new FormInfoMap();
+        //}
 
 
-        public static readonly Form MainForm;
+        //public static readonly Form MainForm;
 
 
-        private static readonly FormInfoMap _formInfos;
+        //private static readonly FormInfoMap _formInfos;
 
-        public static FormInfo GetFormInfo(string name)
-        {
-            if (_formInfos.ContainsKey(name))
-                return _formInfos[name];
-            else
-            {
-                FormInfo rfi = new FormInfo(name);
-                _formInfos.Add(name, rfi);
-                return rfi;
-            }
-        }
+        //public static FormInfo GetFormInfo(string name)
+        //{
+        //    if (_formInfos.ContainsKey(name))
+        //        return _formInfos[name];
+        //    else
+        //    {
+        //        FormInfo rfi = new FormInfo(name);
+        //        _formInfos.Add(name, rfi);
+        //        return rfi;
+        //    }
+        //}
 
         //public static void MakeFormInfo(string name, f)
         //{

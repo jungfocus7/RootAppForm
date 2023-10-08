@@ -54,7 +54,7 @@ namespace AppNormalForm
             _cms.Items.Add(new ToolStripSeparator());
             _cms.Items.Add(new ToolStripMenuItemEx("A) 개발자", "Tsi_A", prToolStripMenu_Click));
             _cms.Items.Add(new ToolStripMenuItemEx("B) 개발자", "Tsi_B", prToolStripMenu_Click));
-            m_txb31.ContextMenuStrip = _cms;
+            m_btn31.ContextMenuStrip = _cms;
         }
 
         private void prToolStripMenu_Click(object sender, EventArgs e)
