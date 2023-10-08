@@ -28,6 +28,8 @@ namespace AppNormalForm
             base.OnLoad(e);
 
             this.AlignBottomRight(40, 40);
+            this.ResizeRenderingPass();
+            MinimumSize = Size;
 
             prControlSettings();
         }
@@ -54,6 +56,7 @@ namespace AppNormalForm
             _cms.Items.Add(new ToolStripSeparator());
             _cms.Items.Add(new ToolStripMenuItemEx("A) 개발자", "Tsi_A", prToolStripMenu_Click));
             _cms.Items.Add(new ToolStripMenuItemEx("B) 개발자", "Tsi_B", prToolStripMenu_Click));
+            _cms.Items.Add(new ToolStripMenuItemEx("C) 개발자", "Tsi_C", prToolStripMenu_Click));
             m_btn31.ContextMenuStrip = _cms;
         }
 
