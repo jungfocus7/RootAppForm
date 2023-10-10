@@ -38,7 +38,7 @@ namespace AppNormalForm
         {
             base.OnClosed(e);
 
-            Application.Exit();
+            //Application.Exit();
         }
 
 
