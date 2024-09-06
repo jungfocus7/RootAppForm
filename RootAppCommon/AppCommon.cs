@@ -1,4 +1,7 @@
 ﻿using RootAppCommon.Models;
+using System;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 
@@ -13,6 +16,10 @@ namespace RootAppCommon
         /// </summary>
         static AppCommon()
         {
+            string wdp = Environment.GetCommandLineArgs()[0];
+            wdp = Path.GetDirectoryName(wdp);
+            AppWorkDirectory = wdp;
+
             MainForm = Application.OpenForms["MainForm"];
             _sfim = new FormInfoMap();
         }
@@ -23,6 +30,10 @@ namespace RootAppCommon
 
         //}
 
+        /// <summary>
+        /// 어플리케이션 시작 경로
+        /// </summary>
+        public static readonly string AppWorkDirectory;
 
 
         /// <summary>

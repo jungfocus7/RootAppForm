@@ -44,7 +44,7 @@ Public NotInheritable Class MainForm
         m_lstv.EndUpdate()
         m_lstv.Items(0).Selected = True
 
-        pr_btn31__Click(Nothing, Nothing)
+        'pr_btn31__Click(Nothing, Nothing)
     End Sub
 
 
@@ -62,9 +62,6 @@ Public NotInheritable Class MainForm
 
             Dim name As String = lvi.SubItems(1).Text
             Dim fi As FormInfo = AppCommon.GetFormInfo(name)
-            If fi.RefFrom Is Nothing Then
-                fi.RefFrom = New NormalForm()
-            End If
             fi.RefFrom.ShowDialog(Me)
         Catch
         End Try
